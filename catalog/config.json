@@ -1,0 +1,17 @@
+{
+  "tagline": "Get Alert Conditions targetting your Synthetics Monitor",
+  "details": "Without leaving the Monitor Entity you can fetch details on every Alert Condition that's targetting the Monitor, including Single Location, Multi-Location and NRQL Conditions!",
+  "repository": "",
+  "whatsNew": "",
+  "support": {
+    "email": {
+      "address": "rdouglas@newrelic.com"
+    },
+    "issues": {
+      "url": ""
+    },
+    "community": {
+      "url": ""
+    }
+  }
+}

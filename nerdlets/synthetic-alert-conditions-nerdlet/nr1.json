@@ -1,0 +1,7 @@
+{
+    "schemaType": "NERDLET",
+    "id": "synthetic-alert-conditions-nerdlet",
+    "displayName": "Synthetic Condition Search",
+    "description": "WIP reach out to rdouglas@newrelic.com",
+    "entities": ["*"]
+}
