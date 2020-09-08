@@ -1,0 +1,56 @@
+{
+  "lastUpdated": "Tue Sep 08 2020 12:25:15 GMT+0100 (IST)",
+  "projectName": "Synthetics Alert Conditions Search",
+  "projectUrl": "https://github.com/newrelic-experimental/nr1-synthetics-alerts",
+  "includeDev": true,
+  "dependencies": {
+    "bluebird@3.7.2": {
+      "name": "bluebird",
+      "version": "3.7.2",
+      "range": "^3.7.2",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/petkaantonov/bluebird",
+      "versionedRepoUrl": "https://github.com/petkaantonov/bluebird/tree/v3.7.2",
+      "licenseFile": "node_modules/bluebird/LICENSE",
+      "licenseUrl": "https://github.com/petkaantonov/bluebird/blob/v3.7.2/LICENSE",
+      "licenseTextSource": "file",
+      "publisher": "Petka Antonov",
+      "email": "petka_antonov@hotmail.com",
+      "url": "http://github.com/petkaantonov/"
+    },
+    "prop-types@15.7.2": {
+      "name": "prop-types",
+      "version": "15.7.2",
+      "range": "^15.6.2",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/facebook/prop-types",
+      "versionedRepoUrl": "https://github.com/facebook/prop-types/tree/v15.7.2",
+      "licenseFile": "node_modules/prop-types/LICENSE",
+      "licenseUrl": "https://github.com/facebook/prop-types/blob/v15.7.2/LICENSE",
+      "licenseTextSource": "file"
+    },
+    "react-dom@16.13.1": {
+      "name": "react-dom",
+      "version": "16.13.1",
+      "range": "^16.6.3",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/facebook/react",
+      "versionedRepoUrl": "https://github.com/facebook/react/tree/v16.13.1",
+      "licenseFile": "node_modules/react-dom/LICENSE",
+      "licenseUrl": "https://github.com/facebook/react/blob/v16.13.1/LICENSE",
+      "licenseTextSource": "file"
+    },
+    "react@16.13.1": {
+      "name": "react",
+      "version": "16.13.1",
+      "range": "^16.6.3",
+      "licenses": "MIT",
+      "repoUrl": "https://github.com/facebook/react",
+      "versionedRepoUrl": "https://github.com/facebook/react/tree/v16.13.1",
+      "licenseFile": "node_modules/react/LICENSE",
+      "licenseUrl": "https://github.com/facebook/react/blob/v16.13.1/LICENSE",
+      "licenseTextSource": "file"
+    }
+  },
+  "devDependencies": {}
+}

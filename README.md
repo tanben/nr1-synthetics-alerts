@@ -73,4 +73,4 @@ If you have any questions, or to execute our corporate CLA, required if your con
 
 Synthetics Alert Condition Search is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
 
->Synthetics Condition Search also uses source code from the [Bluebird](https://github.com/petkaantonov/bluebird) third-party library.
+>Synthetics Condition Search also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document.
