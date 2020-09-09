@@ -13,27 +13,30 @@
 
 ## Installation
 
-> Check your profile is correct:
+> Setup your Developer Environment as per the guidelines on the Developer site:
+ - https://developer.newrelic.com/build-apps/set-up-dev-env
+
+> Check your local profile is correct:
 
 ```
 nr1 profiles:default
 ```
 
-Clone the Repository
+> Clone the Repository
 ```
-nr1 nerdpack:clone -r git@source.datanerd.us:rdouglas/Synthetics-Alert-Condition-Search.git
+nr1 nerdpack:clone -r https://github.com/newrelic-experimental/nr1-synthetics-alerts.git
 ```
 
-Enter your password
+> **Enter your password**
 
-Install Node Modules:
+> Install Node Modules:
 
 ```
 cd Synthetics-Alert-Condition-Search
 npm i
 ```
 
-Generate a new UUID for the NerdPack:
+> Generate a new UUID for the NerdPack:
 ```
 nr1 nerdpack:uuid -gf
 ```
