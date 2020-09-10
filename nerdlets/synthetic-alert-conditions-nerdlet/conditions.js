@@ -115,13 +115,14 @@ export default class SyntheticAlertConditionsNerdlet extends React.Component {
                 if (jsondata.synthetics_conditions.length > 0){
                     let allConditions = _self.state.allConditions
                     for (let condition of jsondata.synthetics_conditions){
-                    
+                        
+                        let region = _self.state.region == "EU" ? ".eu" : null;
                         condition.policy = policy
                         condition.type = "Single"
                         condition.entities = []
                         condition.entities.push(condition.monitor_id)
                         let encoded = btoa(`{"nerdletId":"alerting-ui-classic.policies","nav":"Policies","selectedField":"thresholds","policyId":"` + condition.policy.id + `","conditionId":"` + condition.id + `"}`)
-                        condition.permalink = 'https://one.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
+                        condition.permalink = 'https://one' + region + '.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
                     
                         allConditions.push(condition)
                         // console.log("Individual condition", condition)
@@ -172,11 +173,12 @@ export default class SyntheticAlertConditionsNerdlet extends React.Component {
                 if (jsondata.location_failure_conditions.length > 0){
                     let allConditions = _self.state.allConditions
                     for (let condition of jsondata.location_failure_conditions){
-                    
+                        
+                        let region = _self.state.region == "EU" ? ".eu" : null;
                         condition.policy = policy
                         condition.type = "Multi"
                         let encoded = btoa(`{"nerdletId":"alerting-ui-classic.policies","nav":"Policies","selectedField":"thresholds","policyId":"` + condition.policy.id + `","conditionId":"` + condition.id + `"}`)
-                        condition.permalink = 'https://one.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
+                        condition.permalink = 'https://one' + region + '.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
                     
                         allConditions.push(condition)
                         // console.log("Individual condition", condition)
@@ -339,11 +341,12 @@ export default class SyntheticAlertConditionsNerdlet extends React.Component {
             if (nrql[0]){
                 let filteredConditions = _self.state.filteredConditions
                 for (let condition of nrql){
-                
+                    
+                    let region = _self.state.region == "EU" ? ".eu" : null;
                     condition.type = "NRQL"
                     condition.entities = []
                     let encoded = btoa(`{"nerdletId":"alerting-ui-classic.policies","nav":"Policies","selectedField":"thresholds","policyId":"` + condition.policyId + `","conditionId":"` + condition.id + `"}`)
-                    condition.permalink = 'https://one.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
+                    condition.permalink = 'https://one' + region + '.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
                     
                     filteredConditions.push(condition)
                     // console.log("Individual condition", condition)
@@ -399,11 +402,11 @@ export default class SyntheticAlertConditionsNerdlet extends React.Component {
             if (nrql[0]){
                 let filteredConditions = _self.state.filteredConditions
                 for (let condition of nrql){
-                
+                    let region = _self.state.region == "EU" ? ".eu" : null;
                     condition.type = "NRQL"
                     condition.entities = []
                     let encoded = btoa(`{"nerdletId":"alerting-ui-classic.policies","nav":"Policies","selectedField":"thresholds","policyId":"` + condition.policyId + `","conditionId":"` + condition.id + `"}`)
-                    condition.permalink = 'https://one.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
+                    condition.permalink = 'https://one' + region + '.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
                     
                     filteredConditions.push(condition)
                     // console.log("Individual condition", condition)
@@ -459,12 +462,13 @@ export default class SyntheticAlertConditionsNerdlet extends React.Component {
             if (nrql[0]){
                 let filteredConditions = _self.state.filteredConditions
                 for (let condition of nrql){
-                
+                    
+                    let region = _self.state.region == "EU" ? ".eu" : null;
                     condition.type = "NRQL Facet"
                     condition.facet = true
                     condition.entities = []
                     let encoded = btoa(`{"nerdletId":"alerting-ui-classic.policies","nav":"Policies","selectedField":"thresholds","policyId":"` + condition.policyId + `","conditionId":"` + condition.id + `"}`)
-                    condition.permalink = 'https://one.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
+                    condition.permalink = 'https://one' + region + '.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
                     filteredConditions.push(condition)
                     // console.log("Individual condition", condition)
                     
@@ -519,11 +523,12 @@ export default class SyntheticAlertConditionsNerdlet extends React.Component {
             if (nrql[0]){
                 let filteredConditions = _self.state.filteredConditions
                 for (let condition of nrql){
-                
+                    
+                    let region = _self.state.region == "EU" ? ".eu" : null;
                     condition.type = "NRQL Facet"
                     condition.entities = []
                     let encoded = btoa(`{"nerdletId":"alerting-ui-classic.policies","nav":"Policies","selectedField":"thresholds","policyId":"` + condition.policyId + `","conditionId":"` + condition.id + `"}`)
-                    condition.permalink = 'https://one.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
+                    condition.permalink = 'https://one' + region + '.newrelic.com/launcher/nrai.launcher?pane=' + encoded + '&sidebars[0]=eyJuZXJkbGV0SWQiOiJucmFpLm5hdmlnYXRpb24tYmFyIiwibmF2IjoiUG9saWNpZXMifQ&platform[accountId]=' + accountId
                     filteredConditions.push(condition)
                     // console.log("Individual condition", condition)
                     
