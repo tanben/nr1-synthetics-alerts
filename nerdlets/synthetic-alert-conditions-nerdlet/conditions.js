@@ -821,7 +821,7 @@ export default class SyntheticAlertConditionsNerdlet extends React.Component {
    
                        {({ item }) => (
                        <TableRow>
-                           <TableRowCell>{item.type == "NRQL Facet" ? <Icon type={Icon.TYPE.INTERFACE__INFO__INFO} /> : null} <Link to={item.permalink}>{item.name} </Link></TableRowCell>
+                           <TableRowCell>{item.type == "NRQL Facet" ? <Icon type={Icon.TYPE.INTERFACE__INFO__INFO} /> : null} <Link to={item.permalink}>{item.name.length > 25 ? item.name.substring(0,25) + "..." : item.name} </Link></TableRowCell>
                            <TableRowCell><Tooltip text={item.entities.join('\n')} 
                                                   placementType={Tooltip.PLACEMENT_TYPE.BOTTOM}
                                          >{item.entities.length > 0 ? item.entities.length : "-"}</Tooltip></TableRowCell>
