@@ -1,4 +1,6 @@
 package-lock.json
 README 2.md
 node_modules
-./dist/metadata.json
+dist
+.DS_Store
+**/.DS_Store
